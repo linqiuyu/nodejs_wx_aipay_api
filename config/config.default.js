@@ -8,12 +8,12 @@ module.exports = appInfo => {
   // 签名密匙妥善保管，不可泄露，务必修改
   config.secretkey = 'yioMe';
   // 绑定的域名， 务必修改
-  config.domain = 'http://10.10.10.65:7001'; // 请指定协议
+  config.domain = 'http://127.0.0.1:7001'; // 请指定协议
   // 支付宝userid pc登录 https://my.alipay.com/portal/i.htm 右键查看网页源代码搜索 userId 得到的值 和支付宝收款用户绑定
-  config.alipayUserId = '2088012748271675';
+  config.alipayUserId = '2088802XXXXXXXX';
   config.payMax = { // 设置随机立减金额，单位为0.01
-    wx: 10, // 表示会在订单金额的基础上最多减免 0.01 * 10,减免的金额必须有对应的收款二维码，否则无法下单!
-    alipay: 20, // 支付宝可以任意设置减免金额，无需上传二维码!
+    wx: 0, // 表示会在订单金额的基础上最多减免 0.01 * 10,减免的金额必须有对应的收款二维码，否则无法下单!
+    alipay: 0, // 支付宝可以任意设置减免金额，无需上传二维码!
   };
   // 设置 修改 订单有效期
   config.orderValidity = 5; // 默认是5分钟 整数
@@ -29,17 +29,17 @@ module.exports = appInfo => {
     dialect: 'mysql', // 数据库类型，不要修改
     host: '127.0.0.1', // 数据库地址
     port: 3306,
-    username: 'root', // 数据库账号
-    password: 'root', // 数据库密码
-    database: 'egg', // 数据库名
+    username: 'linqiuyu', // 数据库账号
+    password: '123456', // 数据库密码
+    database: 'pay', // 数据库名
     timezone: '+08:00',
   };
   // 百度orc 申请地址 http://ai.baidu.com/tech/ocr 务必修改
   config.baidu = {
     // 设置APPID/AK/SK
-    APP_ID: 'xx',
-    API_KEY: 'xxx',
-    SECRET_KEY: 'xxxx',
+    APP_ID: '16777865',
+    API_KEY: '1GlYQpiOTzlrFwH5UIhUrHZC',
+    SECRET_KEY: 'XzXyPML8I5iL5carvNlCYmRU3xlVGdOI',
   };
   // 验证器，请勿修改
   config.valdate = {

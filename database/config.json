@@ -1,8 +1,8 @@
 {
   "development": {
-    "username": "root",
+    "username": "linqiuyu",
     "password": "123456",
-    "database": "database",
+    "database": "pay",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

@@ -14,8 +14,8 @@ module.exports = app => {
     qr_price: { type: DECIMAL(7, 2), allowNull: false },
     redirect_url: { type: STRING(255), allowNull: false },
     extension: { type: STRING(255) },
-    created_at: { type: DATE, allowNull: false, get() { return moment(this.getDataValue('created_at')).format('YYYY-MM-DD HH:mm:ss'); } },
-    updated_at: { type: DATE, allowNull: false, get() { return moment(this.getDataValue('updated_at')).format('YYYY-MM-DD HH:mm:ss'); } },
+    created_at: { type: DATE, allowNull: true, get() { return moment(this.getDataValue('created_at')).format('YYYY-MM-DD HH:mm:ss'); } },
+    updated_at: { type: DATE, allowNull: true, get() { return moment(this.getDataValue('updated_at')).format('YYYY-MM-DD HH:mm:ss'); } },
   }, {
     paranoid: true,
     timestamps: true,
